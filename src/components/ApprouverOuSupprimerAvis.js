@@ -8,7 +8,7 @@ const ApprouverOuSupprimerAvis = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/avis-non-verif')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/avis-non-verif')
         setData(response.data)
     }
 
@@ -20,14 +20,14 @@ const ApprouverOuSupprimerAvis = () => {
 
     const handleDelete = (id) => {
         if (window.confirm("Êtes-vous sûr de vouloir supprimer définitivement cet avis ?")) {
-            axios.delete(`garage-studi-backend.up.railway.app/avis-non-verif/remove/${id}`);
+            axios.delete(`https://garage-studi-backend.up.railway.app/avis-non-verif/remove/${id}`);
             setTimeout(() => loadData(), 500);
         }
     }
 
     const handleDeleteAll = () => {
         if (window.confirm("Êtes-vous sûr de vouloir supprimer définitivement tout ces avis ?")) {
-            axios.delete(`garage-studi-backend.up.railway.app/avis-verif/remove`);
+            axios.delete(`https://garage-studi-backend.up.railway.app/avis-verif/remove`);
             setTimeout(() => loadData(), 500);
         }
     }
@@ -37,7 +37,7 @@ const ApprouverOuSupprimerAvis = () => {
         const token = localStorage.getItem('token');
 
         try {
-            const response = await axios.post('garage-studi-backend.up.railway.app/add-avis-verif', { name, message, note }, {
+            const response = await axios.post('https://garage-studi-backend.up.railway.app/add-avis-verif', { name, message, note }, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
@@ -47,7 +47,7 @@ const ApprouverOuSupprimerAvis = () => {
             console.log('name, message, note', name, message, note)
             alert('Avis approuvé avec succès')
             if (response.data) {
-                axios.delete(`garage-studi-backend.up.railway.app/avis-non-verif/remove/${id}`);
+                axios.delete(`https://garage-studi-backend.up.railway.app/avis-non-verif/remove/${id}`);
                 setTimeout(() => loadData(), 500);
                 console.log('avis supprimer de la liste non vérifié');
             }

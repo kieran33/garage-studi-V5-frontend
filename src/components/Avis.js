@@ -9,7 +9,7 @@ const Avis = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/avis-verif')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/avis-verif')
         setData(response.data)
     }
 

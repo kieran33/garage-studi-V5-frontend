@@ -10,7 +10,7 @@ const BoutonSupprimerVoitures = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/voitures')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/voitures')
         setData(response.data);
     }
 
@@ -20,10 +20,10 @@ const BoutonSupprimerVoitures = () => {
 
     const handleDelete = async (id, marqueVoiture) => {
         if (window.confirm("Êtes-vous sûr de vouloir supprimer définitivement cette voiture ?")) {
-            axios.delete(`garage-studi-backend.up.railway.app/voitures/remove/${id}`);
+            axios.delete(`https://garage-studi-backend.up.railway.app/voitures/remove/${id}`);
 
             try {
-                await axios.delete(`garage-studi-backend.up.railway.app/supprimer-voitures-vues/${marqueVoiture}`);
+                await axios.delete(`https://garage-studi-backend.up.railway.app/supprimer-voitures-vues/${marqueVoiture}`);
             } catch (error) {
                 console.log(error)
             }
@@ -56,7 +56,7 @@ const BoutonSupprimerVoitures = () => {
                     <div>
                         {data.map((voiture, index) => (
                             <div index={index} className="employe">
-                                <img className="imageSupprimerVoiture" src={`garage-studi-backend.up.railway.app/uploads/${voiture.image}`} />
+                                <img className="imageSupprimerVoiture" src={`https://garage-studi-backend.up.railway.app/uploads/${voiture.image}`} />
                                 <p>id : {voiture.id}</p>
                                 <p>marque : {voiture.brand}</p>
                                 <button onClick={() => handleDelete(voiture.id, voiture.brand)}>Supprimer</button>

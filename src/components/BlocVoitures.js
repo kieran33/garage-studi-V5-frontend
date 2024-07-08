@@ -21,7 +21,7 @@ const BlocVoitures = () => {
     const navigate = useNavigate();
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/voitures')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/voitures')
         setData(response.data)
     }
 
@@ -64,7 +64,7 @@ const BlocVoitures = () => {
 
     const augmenterVue = () => {
         try {
-            axios.put(`garage-studi-backend.up.railway.app/augmenter-vues-voitures`, { marqueVoiture })
+            axios.put(`https://garage-studi-backend.up.railway.app/augmenter-vues-voitures`, { marqueVoiture })
         } catch (error) {
             console.log(error);
         }
@@ -159,7 +159,7 @@ const BlocVoitures = () => {
                         <div className="voiture" key={index}>
                             <div>
                                 <img className="imageVoiture"
-                                    src={`garage-studi-backend.up.railway.app/uploads/${voiture.image}`}
+                                    src={`https://garage-studi-backend.up.railway.app/uploads/${voiture.image}`}
                                     alt={voiture.brand}
                                 />
                                 <p>source image : {voiture.image}</p>

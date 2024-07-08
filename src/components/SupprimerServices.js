@@ -7,7 +7,7 @@ const SupprimerEmploye = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/services')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/services')
         setData(response.data);
     }
 
@@ -17,7 +17,7 @@ const SupprimerEmploye = () => {
 
     const handleDelete = (name) => {
         if (window.confirm("Êtes-vous sûr de vouloir supprimer définitivement ce service ?")) {
-            axios.delete(`garage-studi-backend.up.railway.app/services/remove/${name}`);
+            axios.delete(`https://garage-studi-backend.up.railway.app/services/remove/${name}`);
             setTimeout(() => loadData(), 500);
         }
     }
@@ -28,7 +28,7 @@ const SupprimerEmploye = () => {
             <div>
                 {data.map((service, index) => (
                     <div index={index} className="employe">
-                        <img className="imageSupprimerVoiture" src={`garage-studi-backend.up.railway.app/uploads/${service.image}`} />
+                        <img className="imageSupprimerVoiture" src={`https://garage-studi-backend.up.railway.app/uploads/${service.image}`} />
                         <p>Nom service : {service.name}</p>
                         <p>Explication service : {service.content}</p>
                         <button onClick={() => handleDelete(service.name)}>Supprimer</button>

@@ -18,7 +18,7 @@ const DetailsVoiture = () => {
     const idNumber = Number(id);
 
     const loadData = async () => {
-        const response = await axios.get('garage-studi-backend.up.railway.app/voitures')
+        const response = await axios.get('https://garage-studi-backend.up.railway.app/voitures')
         setData(response.data);
     }
 

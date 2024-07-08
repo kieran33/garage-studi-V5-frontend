@@ -99,8 +99,8 @@ const BoutonAjoutVoitures = () => {
             })*/
 
         try {
-            axios.post('garage-studi-backend.up.railway.app/addVoiture', formData, { headers });
-            axios.post("garage-studi-backend.up.railway.app/ajout-voitures-vues", { marqueVoiture });
+            axios.post('https://garage-studi-backend.up.railway.app/addVoiture', formData, { headers });
+            axios.post("https://garage-studi-backend.up.railway.app/ajout-voitures-vues", { marqueVoiture });
         } catch (error) {
             console.log(error);
         }
