@@ -7,7 +7,7 @@ const SupprimerEmploye = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('http://localhost:3002/employes')
+        const response = await axios.get('garage-studi-backend.up.railway.app/employes')
         setData(response.data);
     }
 
@@ -17,7 +17,7 @@ const SupprimerEmploye = () => {
 
     const handleDelete = (email) => {
         if (window.confirm("Êtes-vous sûr de vouloir supprimer définitivement ce compte employé ?")) {
-            axios.delete(`http://localhost:3002/employes/remove/${email}`);
+            axios.delete(`garage-studi-backend.up.railway.app/employes/remove/${email}`);
             setTimeout(() => loadData(), 500);
         }
     }

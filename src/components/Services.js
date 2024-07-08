@@ -6,7 +6,7 @@ const Services = () => {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('http://localhost:3002/services')
+        const response = await axios.get('garage-studi-backend.up.railway.app/services')
         setData(response.data);
     }
 
@@ -25,11 +25,11 @@ const Services = () => {
                                 <h3 className="nomService">{service.name}</h3>
                                 <p className="paragrapheService">{service.content}</p>
                             </div>
-                            <img className="imageService" src={`http://localhost:3002/uploads/${service.image}`} />
+                            <img className="imageService" src={`garage-studi-backend.up.railway.app/uploads/${service.image}`} />
                         </div>
                         :
                         <div className="services" index={index}>
-                            <img className="imageService" src={`http://localhost:3002/uploads/${service.image}`} />
+                            <img className="imageService" src={`garage-studi-backend.up.railway.app/uploads/${service.image}`} />
                             <div className="texteService">
                                 <h3 className="nomService">{service.name}</h3>
                                 <p>{service.image}</p>

@@ -32,7 +32,7 @@ const CreerEmploye = () => {
 
         if ((hasNumbers === true) && (hasLetters === true)) {
             try {
-                const response = await axios.post('http://localhost:3002/create-employe', newUser, {
+                const response = await axios.post('garage-studi-backend.up.railway.app/create-employe', newUser, {
                     headers: {
                         'Content-Type': 'application/json',
                     },

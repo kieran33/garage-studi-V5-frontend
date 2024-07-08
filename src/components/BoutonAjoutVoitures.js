@@ -99,8 +99,8 @@ const BoutonAjoutVoitures = () => {
             })*/
 
         try {
-            axios.post('http://localhost:3002/addVoiture', formData, { headers });
-            axios.post("http://localhost:3002/ajout-voitures-vues", { marqueVoiture });
+            axios.post('garage-studi-backend.up.railway.app/addVoiture', formData, { headers });
+            axios.post("garage-studi-backend.up.railway.app/ajout-voitures-vues", { marqueVoiture });
         } catch (error) {
             console.log(error);
         }

@@ -51,7 +51,7 @@ const AjoutServices = () => {
         formData.append('content', newServices.content);
         formData.append('uploadImage', newServices.image);
 
-        axios.post('http://localhost:3002/addService', formData, { headers })
+        axios.post('garage-studi-backend.up.railway.app/addService', formData, { headers })
             .then(response => {
                 console.log(response.data);
                 setNewServices(getDefaultService());

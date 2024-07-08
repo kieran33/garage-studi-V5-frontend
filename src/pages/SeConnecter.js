@@ -14,7 +14,7 @@ const SeConnecter = () => {
     const connexion = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3002/login', {
+            const response = await axios.post('garage-studi-backend.up.railway.app/login', {
                 email: email,
                 password: password
             });

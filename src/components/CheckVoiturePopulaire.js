@@ -9,7 +9,7 @@ const CheckVoiturePopulaire = () => {
     const [dataVuesVoituresTrier, setDataVuesVoituresTrier] = useState([]);
 
     const loadData = async () => {
-        const response = await axios.get('http://localhost:3002/voitures')
+        const response = await axios.get('garage-studi-backend.up.railway.app/voitures')
         setData(response.data)
     }
 
@@ -19,7 +19,7 @@ const CheckVoiturePopulaire = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3002/vues-voitures')
+        axios.get('garage-studi-backend.up.railway.app/vues-voitures')
             .then(voitures => setDataVuesVoitures(voitures.data))
             .catch(err => console.log(err))
     }, []);
@@ -48,7 +48,7 @@ const CheckVoiturePopulaire = () => {
                         <div key={index}>
                             {voiture.brand === vueVoiture.marque ?
                                 <img className="imageVoiture"
-                                    src={`http://localhost:3002/uploads/${voiture.image}`}
+                                    src={`garage-studi-backend.up.railway.app/uploads/${voiture.image}`}
                                     alt={voiture.brand}
                                 />
                                 :

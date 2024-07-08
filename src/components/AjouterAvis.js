@@ -31,7 +31,7 @@ const AjouterAvis = () => {
     const handleAddAvis = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3002/add-avis-non-verif', newAvis, {
+            const response = await axios.post('garage-studi-backend.up.railway.app/add-avis-non-verif', newAvis, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
