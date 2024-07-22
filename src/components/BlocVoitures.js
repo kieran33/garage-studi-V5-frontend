@@ -44,7 +44,7 @@ const BlocVoitures = () => {
             setMinYear(Math.min(...filterYears));
             setMaxYear(Math.max(...filterYears));
 
-            setKilometrage(maxKilometrage);
+            setKilometrage(Math.max(...filterKilometrage));
             setPrice(Math.max(...filterPrice));
             setYear(Math.max(...filterYears));
 
