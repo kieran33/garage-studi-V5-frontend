@@ -162,7 +162,6 @@ const BlocVoitures = () => {
                                     src={`https://garage-studi-backend.up.railway.app/uploads/${voiture.image}`}
                                     alt={voiture.brand}
                                 />
-                                <p>source image : {voiture.image}</p>
                                 <p>Id : {voiture.id}</p>
                                 <p>Marque : {voiture.brand}</p>
                                 <p>Kilométrage : {voiture.km} km</p>

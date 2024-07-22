@@ -32,7 +32,6 @@ const Services = () => {
                             <img className="imageService" src={`https://garage-studi-backend.up.railway.app/uploads/${service.image}`} />
                             <div className="texteService">
                                 <h3 className="nomService">{service.name}</h3>
-                                <p>{service.image}</p>
                                 <p className="paragrapheService">{service.content}</p>
                             </div>
                         </div>
