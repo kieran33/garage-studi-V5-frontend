@@ -63,7 +63,7 @@ const DetailsVoiture = () => {
             <Navigation />
             <h1 className="titreAnnonce">Annonce pour la voiture {dataVoiture.brand}</h1>
             <div className="conteneurDetailVoiture">
-                <img className="imageDetailVoiture" src={`garage-studi-backend.up.railway.app/uploads/${dataVoiture.image}`} />
+                <img className="imageDetailVoiture" src={`https://garage-studi-backend.up.railway.app/uploads/${dataVoiture.image}`} />
                 <div>
                     <p className="infosVoiture">Kilométrage : {dataVoiture.km} km</p>
                     <p className="infosVoiture">Prix : {dataVoiture.price} €</p>
