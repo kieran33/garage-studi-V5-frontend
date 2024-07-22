@@ -28,8 +28,10 @@ const BlocVoitures = () => {
     console.log('checker data', data);
 
     useEffect(() => {
-        loadData();
-    }, []);
+        if (data.length === 0) {
+            loadData();
+        }
+    }, [data]);
 
     useEffect(() => {
         if (data.length > 0) {
