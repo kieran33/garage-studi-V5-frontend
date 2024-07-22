@@ -25,7 +25,7 @@ const BlocVoitures = () => {
         setData(response.data)
     }
 
-    console.log('checker data', data);
+    console.log('checker data changing', data);
 
     useEffect(() => {
         loadData();
