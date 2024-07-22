@@ -48,6 +48,8 @@ const BlocVoitures = () => {
             setPrice(Math.max(...filterPrice));
             setYear(Math.max(...filterYears));
 
+            console.log('maxKilometrage', maxKilometrage);
+
             document.querySelector('input[name="kilometrage"]').value = maxKilometrage;
             document.querySelector('input[name="price"]').value = maxPrice;
             document.querySelector('input[name="years"]').value = maxYear;
