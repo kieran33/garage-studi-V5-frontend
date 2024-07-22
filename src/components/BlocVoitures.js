@@ -29,7 +29,7 @@ const BlocVoitures = () => {
 
     useEffect(() => {
         loadData();
-    }, []);
+    }, [data]);
 
     useEffect(() => {
         if (data.length > 0) {
@@ -52,7 +52,7 @@ const BlocVoitures = () => {
             document.querySelector('input[name="price"]').value = maxPrice;
             document.querySelector('input[name="years"]').value = maxYear;
         }
-    }, [/*data*/]);
+    }, [data]);
 
     const [kilometrage, setKilometrage] = useState(maxKilometrage);
     const [price, setPrice] = useState(maxPrice);
