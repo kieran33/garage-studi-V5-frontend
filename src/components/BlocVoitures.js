@@ -29,7 +29,7 @@ const BlocVoitures = () => {
 
     useEffect(() => {
         loadData();
-    }, [data]);
+    }, []);
 
     useEffect(() => {
         if (data.length > 0) {
