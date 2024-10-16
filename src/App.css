@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour+Convergence&display=swap");
+
+* {
+  letter-spacing: 2px;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
 @media only screen and (max-width: 1060px) {
   .navigation {
     flex-wrap: wrap;
@@ -21,16 +31,20 @@
     margin: 10px;
   }
 
-  .footer {
+  /*.footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /*position: absolute;*/
     bottom: 0%;
     width: 100%;
     box-sizing: border-box;
     background-color: #262526;
     margin-top: 50px;
+    color: white;
+  }*/
+
+  footer {
+    background-color: #262526;
     color: white;
   }
 }
@@ -52,16 +66,20 @@
     gap: 100px;
   }
 
-  .footer {
+  /*.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*position: absolute;*/
     bottom: 0%;
     width: 100%;
     box-sizing: border-box;
     background-color: #262526;
     margin-top: 50px;
+    color: white;
+  }*/
+
+  footer {
+    background-color: #262526;
     color: white;
   }
 
@@ -143,16 +161,20 @@
 }
 
 @media only screen and (max-width: 560px) {
-  .footer {
+  /*.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*position: absolute;*/
     bottom: 0%;
     width: 100%;
     box-sizing: border-box;
     background-color: #262526;
     margin-top: 50px;
+    color: white;
+  }*/
+
+  footer {
+    background-color: #262526;
     color: white;
   }
 
@@ -208,7 +230,7 @@
   .prenomFormulaireContactDetailVoiture,
   .emailFormulaireContactDetailVoiture,
   .phoneFormulaireContactDetailVoiture {
-    width: 160px
+    width: 160px;
   }
 }
 
@@ -222,7 +244,7 @@
   .prenomFormulaireContactDetailVoiture,
   .emailFormulaireContactDetailVoiture,
   .phoneFormulaireContactDetailVoiture {
-    width: 200px
+    width: 200px;
   }
 }
 
@@ -242,7 +264,7 @@
   .prenomFormulaireContactDetailVoiture,
   .emailFormulaireContactDetailVoiture,
   .phoneFormulaireContactDetailVoiture {
-    width: 100px
+    width: 100px;
   }
 
   .boutonformulaireContactDetailVoiture {
@@ -252,7 +274,6 @@
 }
 
 @media only screen and (min-width: 200px) {
-
   .nomFormulaireContact,
   .prenomFormulaireContact,
   .emailFormulaireContact,
@@ -343,7 +364,6 @@
   }
 }
 
-
 @media only screen and (max-width: 400px) {
   .explicationService {
     width: 200px;
@@ -382,12 +402,12 @@ body {
 
 .boutonEspacePro {
   background-color: white;
-  color: #D94350;
+  color: #d94350;
   margin-top: 10px;
 }
 
 .boutonEspacePro:hover {
-  background-color: #D94350;
+  background-color: #d94350;
   color: white;
 }
 
@@ -442,7 +462,6 @@ p {
   border-radius: 10px;
 }
 
-
 .imageVoiture {
   /*max-width: 200px;
   max-height: 200px;*/
@@ -482,9 +501,12 @@ button {
 }
 
 .boutonContactDetailVoitureMessage,
-.boutonContactDetailVoitureTelephone,
 .boutonRendezVousFormulaire {
   margin: 10px;
+}
+
+.boutonContactDetailVoitureTelephone {
+  margin: 0;
 }
 
 .myModal {
@@ -523,7 +545,7 @@ button {
 
 .boutonformulaireContactDetailVoiture {
   gap: 50px;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 legend {
@@ -593,7 +615,6 @@ textarea {
   align-items: center;
 }
 
-.listeAvis,
 .listeEmployes {
   display: flex;
   flex-direction: column;
@@ -601,12 +622,26 @@ textarea {
   text-align: center;
 }
 
-.avisClient,
+.listeAvis {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .employe {
   border: lightgray solid 1px;
   margin: 20px;
   box-shadow: 2px 2px 2px black;
   border-radius: 10px;
+}
+
+.avisClient {
+  border: lightgray solid 1px;
+  margin: 20px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 5px;
+  width: 300px;
 }
 
 .nomClientNote {
@@ -616,6 +651,7 @@ textarea {
   gap: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  width: 100%;
 }
 
 .positionStarRating {
@@ -669,6 +705,11 @@ li {
   margin-bottom: 10px;
 }
 
+#email,
+#password {
+  width: 200px;
+}
+
 #heureRendezVous,
 #date {
   text-align: center;
@@ -709,7 +750,7 @@ li {
 
 button {
   padding: 10px;
-  background-color: #D94350;
+  background-color: #d94350;
   border-radius: 10px;
   color: white;
   border: none;
@@ -722,7 +763,7 @@ button {
 
 input:focus,
 textarea:focus {
-  border: solid 2px #D94350;
+  border: solid 2px #d94350;
   outline-style: none;
 }
 
@@ -731,11 +772,11 @@ a:hover {
 }
 
 a {
-  color: #D94350;
+  color: #d94350;
 }
 
 .active {
-  background-color: #D94350;
+  background-color: #d94350;
   border-radius: 5px;
   color: white;
   padding: 10px;
@@ -843,4 +884,226 @@ button:hover {
   width: auto;
   height: 100px;
   border-radius: 10px;
+}
+
+/* Container principal */
+.navigation-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Disposition flexbox pour la navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Conteneur pour le logo */
+.logo-container {
+  cursor: pointer;
+}
+
+/* Style du logo */
+.garage-logo {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.garage-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Disposition des onglets */
+.navigation-onglets {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style des liens de navigation */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Bouton Espace Pro et Déconnexion */
+.bouton-espace-pro {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bouton-espace-pro:hover {
+  background-color: #0056b3;
+}
+
+/* Liens spécifiques au dashboard */
+.dashboard-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Ajout de réactivité */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-onglets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+.contact {
+  padding: 65px 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-list {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+}
+.contact-list .list {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 0 10px;
+}
+.contact-list .list_image {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+#contact-img img {
+  display: block;
+  cursor: pointer;
+}
+.contact-list h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.infos-p li {
+  margin: 15px 0;
+}
+.infos-p li a {
+  cursor: pointer;
+}
+.list li {
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+.copyright {
+  text-align: center;
+}
+.horaire_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+footer {
+  padding: 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover,
+footer li:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1099px) {
+  .contact-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .buttonRendezVou {
+    margin: 0 10px;
+  }
+  .contact-list .list {
+    width: 100%;
+  }
+
+  .boutonContactDetailVoitureTelephone {
+    margin: 0;
+  }
+  .buttonRendezVous {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  .horaire_footer {
+    align-items: center;
+  }
+
+  .list .bouton_footer {
+    gap: 20px;
+  }
+
+  .boutonContactDetailVoitureTelephone {
+    margin: 0;
+  }
+
+  .buttonRendezVous {
+    margin: 0 10px 0 0;
+  }
+}
+
+.buttonRendezVous {
+  margin: 0 10px 0 0;
+}
+
+@media only screen and (min-width: 560px) {
+  .questionFormulaireContact {
+    width: 500px;
+  }
 }
